@@ -1,0 +1,44 @@
+---
+import "../styles/global.css";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello</title>
+    <meta
+      name="description"
+      content="A hello world site built with Astro, Tailwind, and deployed on Cloudflare Workers."
+    />
+  </head>
+  <body class="min-h-screen bg-[var(--page-bg)] text-slate-950 antialiased">
+    <div class="relative isolate overflow-hidden">
+      <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.72),_transparent_34%),linear-gradient(135deg,_#f7efe1_0%,_#e4f1ff_44%,_#ffd9b8_100%)]"></div>
+      <div class="absolute left-1/2 top-16 -z-10 h-72 w-72 -translate-x-1/2 rounded-full bg-orange-200/50 blur-3xl"></div>
+      <main class="mx-auto flex min-h-screen max-w-5xl items-center px-6 py-16">
+        <section class="w-full rounded-[2rem] border border-black/10 bg-white/70 p-8 shadow-[0_24px_80px_rgba(15,23,42,0.14)] backdrop-blur md:p-12">
+          <p class="font-mono text-xs uppercase tracking-[0.35em] text-slate-500">
+            Astro + Tailwind + Cloudflare
+          </p>
+          <h1 class="mt-5 max-w-3xl text-5xl font-semibold tracking-[-0.08em] text-balance text-slate-950 md:text-7xl">
+            Hello, world.
+          </h1>
+          <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-700">
+            This version replaces the inline Worker response with an Astro site styled in
+            Tailwind and served from Cloudflare Workers on the same custom domain.
+          </p>
+          <div class="mt-10 flex flex-col gap-4 text-sm text-slate-600 md:flex-row md:items-center">
+            <span class="inline-flex w-fit items-center rounded-full border border-slate-900/10 bg-slate-950 px-4 py-2 font-medium text-white">
+              hello.pluie.maison
+            </span>
+            <span class="inline-flex w-fit items-center rounded-full border border-slate-900/10 bg-white/80 px-4 py-2">
+              Rendered by Astro on Workers
+            </span>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

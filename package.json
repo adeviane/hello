@@ -2,11 +2,23 @@
   "name": "hello",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "deploy": "wrangler deploy",
-    "dev": "wrangler dev"
+    "build": "astro build",
+    "deploy": "astro build && wrangler deploy --config dist/server/wrangler.json",
+    "dev": "astro dev",
+    "preview": "astro preview"
   },
   "devDependencies": {
     "wrangler": "^4.12.0"
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "^13.1.10",
+    "@tailwindcss/vite": "^4.2.2",
+    "astro": "^6.1.7",
+    "tailwindcss": "^4.2.2"
+  },
+  "overrides": {
+    "vite": "^7.3.2"
   }
 }

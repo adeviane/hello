@@ -1,7 +1,10 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "hello",
-  "main": "src/index.js",
+  "assets": {
+    "binding": "ASSETS",
+    "directory": "./dist"
+  },
   "compatibility_date": "2026-04-17",
   "routes": [
     { "pattern": "hello.pluie.maison", "custom_domain": true }
